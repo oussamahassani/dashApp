@@ -1,0 +1,13 @@
+.apparails{
+    display:flex;
+
+    .apparailContainer{
+        flex:6;
+    
+        .charContainer{
+            display: flex;
+            padding: 20px;
+            gap:20px;
+    }
+    }
+}

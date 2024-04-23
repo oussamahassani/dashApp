@@ -1,0 +1,97 @@
+.NavbarUser {
+    background-color: #dfe1e8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+  }
+  
+  .partConf {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    border: 2px solid lightgoldenrodyellow;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  .desginForAllCards {
+    display: flex;
+    width: 18%;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 3px solid lightgoldenrodyellow;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .desginForAllCards p {
+    font-weight: bold;
+  }
+  .last {
+    width: 5%;
+  }
+  
+  .posteHTB {
+    border: 2px solid lightgoldenrodyellow;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px 5px;
+  }
+  .posteHTB p {
+    font-weight: bold;
+  }
+  .time {
+    border: 2px solid lightgoldenrodyellow;
+    background-color: black;
+    border-radius: 5px;
+    color: rgb(167, 167, 3);
+    padding: 10px;
+  }
+  .time p {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .language {
+    display: flex;
+    width: 10%;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid lightgoldenrodyellow;
+    border-radius: 5px;
+    background-color: #ebf4f0;
+  padding: 15px 10px;
+  }
+  .language img{
+      width: 30px;
+      height: 30px;
+  }
+  .partLang{
+      border: 2px solid lightgray;
+      border-radius: 20px;
+      width: 57%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2px;
+      cursor: pointer;
+  }
+  .colorSpan{
+      background-color: rgb(160, 160, 1);
+      border-radius: 20px;
+      padding: 2px;
+      color: white;
+  }
+  
+  .userandnotif{
+      display: flex;
+      align-items: center;
+  
+  }
+  .searchNotif{
+      display: flex;
+      flex-direction: column;
+  }
+  

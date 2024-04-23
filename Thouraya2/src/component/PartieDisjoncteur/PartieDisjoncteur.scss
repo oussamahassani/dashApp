@@ -1,0 +1,44 @@
+.PartieDisjoncteur{
+
+    padding: 10px;
+    background-color: lightgray;
+    border: solid 1px lightblue;
+}
+.allPartie{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.test {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+.part{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  margin-bottom: 10px;
+}
+.part:last-child{
+    margin-bottom: 0;
+}
+.part p{
+    border: 1px solid black;
+    padding: 10.5px 10px;
+    font-weight: bold;
+    text-align: center;
+    width: 65%;
+}
+.divSpan{
+    border: 1px solid black;
+    padding: 5px;
+}
+.divSpan span{
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: rgb(44, 202, 255);
+    border: 2px solid rgb(1, 1, 65);
+}

@@ -1,0 +1,34 @@
+.featuredChart{
+    flex:2;
+    background-color: rgb(90, 159, 248);
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(185, 16, 16, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(221, 73, 73, 0.47);
+    border-radius: 10px;
+    height: 400px;
+    padding: 10px;
+    form{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    .states, .city, .adress, .postal{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px;
+        font-weight: bold;
+        font-size: 20px;
+        select{
+            flex: 3;
+            height: 30px;
+            border-radius: 10px;
+        }
+        label, input{
+            flex: 2;
+            height: 30px;
+            border-radius: 10px;
+        }
+    }
+    }
+}

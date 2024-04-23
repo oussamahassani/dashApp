@@ -1,0 +1,79 @@
+.MainCompTransfor{
+    background-color: #dfe1e8;
+    padding: 5px;
+}
+.contenuMain{
+    
+    background-color: lightgray;
+    border: 2px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 800px;
+}
+.blockOne{
+    background-image: url("https://www.circuitbreakerwholesale.com/cdn/shop/articles/what_is_an_electrical_transformer.jpg?v=1508776013");
+    position: relative;
+    width: 30%;
+    height: 76%;
+    background-size: cover;
+    border: 3px solid lightgoldenrodyellow;
+    border-radius: 10px;
+}
+.standIcon{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px 0 0 10px;
+    background-color: lightgray;
+    
+}
+.standIcon img{
+    width: 30%;
+    border-radius: 10px 0 0 10px;
+}
+.standIcon p{
+    width: 70%;
+
+text-align: center;
+margin: 0 auto;
+}
+
+.oil{
+    position: absolute;
+    right: 5px;
+    top: 20px;
+}
+.temp{
+    position: absolute;
+    left: 10%;
+    top: 40%;
+}
+.temp img{
+    width: 50px;
+    height: 40px;
+}
+
+.wirless{
+    position: absolute;
+    right: 5%;
+   bottom: 5px;
+}
+.wirless .on{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.wirless .on span{
+    width: 25px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: rgb(3, 156, 16);
+    border: 2px solid rgb(8, 85, 2);
+}
+.wirless .on p{
+    font-weight: bold;
+    margin-left: 5px;
+}
