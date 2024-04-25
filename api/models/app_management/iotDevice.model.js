@@ -8,8 +8,10 @@ const IoTDeviceSchema = new Schema({
     manufacturer: { type: String },
     location: { type: String },
     description: { type: String },
+    typeDevice: { type: String },
+    relationDevice: { type: String },
     is_connected: { type: Boolean, default: false }
-}, 
-{ timestamps: true });
+},
+    { timestamps: true });
 
 export default mongoose.model("IoTDevice", IoTDeviceSchema);
