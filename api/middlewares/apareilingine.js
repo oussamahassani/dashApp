@@ -1,6 +1,6 @@
-import _  from 'underscore';
+import _ from 'underscore';
 import Chance from 'chance';
-import moment  from 'moment';
+import moment from 'moment';
 
 const chance = new Chance();
 
@@ -47,10 +47,10 @@ function Engine(options, socket) {
     var agentsNumber = options.agents || 10; // 10 by default
 
     this.lastDaySendData = new Date().getDate();
-/**
-      * Initializes the call center status, number of agents and information (mock) related to them
-      */
-    this.init = function() {
+    /**
+          * Initializes the call center status, number of agents and information (mock) related to them
+          */
+    this.init = function () {
 
         for (var x = 1; x <= agentsNumber; x++) {
             var tmpName = chance.name({ nationality: 'en' });
@@ -83,10 +83,10 @@ function Engine(options, socket) {
         }
     }
 
-   /**
-      * Method that starts the execution of the engine.
-      */
-    this.run = function() {
+    /**
+       * Method that starts the execution of the engine.
+       */
+    this.run = function () {
         let timing = _.random(0.2, 1.5) * 2000;
         callCenter.timing = timing;
 
@@ -111,7 +111,7 @@ function Engine(options, socket) {
                 entry.status = _.sample(STATUS);
                 entry.stateChangeTime = moment().format(HOUR_FORMAT);
 
-               // Sim accepted and rejected calls
+                // Sim accepted and rejected calls
                 // by agent and all agents
                 if ('TALKING' === entry.status) {
                     entry.statistics.by.calls.accepted++;
@@ -129,11 +129,10 @@ function Engine(options, socket) {
                 callCenter.alerts.push('No hay agentes disponibles!');
             }
 
-           console.log(io.emit('call center status', callCenter))
 
             if (io != null) {
                 io.emit('call center status', callCenter);
-            
+
             }
 
             this.run();

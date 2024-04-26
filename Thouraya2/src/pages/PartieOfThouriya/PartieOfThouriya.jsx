@@ -6,11 +6,12 @@ import "./PartieOfThouriya.scss";
 const PartieOfThouriya = () => {
   return (
     <>
-      {/* <div className="AllMyApp">
+      {/*<div className="AllMyApp">
         <CribleJF100 title={"CRIBLE JF 100"} />
         <ETATSGENERAL title={"ETATS GENERAL"} />
         <CribleJF100 title={"BROYEUR WB 100"} />
-      </div> */}
+      </div>
+  */}
       <Transfor />
     </>
   );

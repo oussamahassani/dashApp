@@ -60,10 +60,23 @@ export const deleteApp = async (req, res) => {
 export const getApp = async (req, res) => {
     try {
         let deviceId = req.params.id;
-        const devices = await IoTDevice.findByIdfindById(deviceId);
+        const devices = await IoTDevice.findById(deviceId);
+        let relationDevice = null;
+        if (devices && devices.typeDevice != null) {
+            console.log(devices)
+            console.log(devices.relationDevice)
+            if (devices.typeDevice == "armoire") {
+                relationDevice = await Armoire.findById(devices.relationDevice);
+            }
+            else if (devices.typeDevice == "transformateur") {
+                relationDevice = await Transformateur.findById(devices.relationDevice);
+            }
+            else if (devices.typeDevice == "groupe") {
+                relationDevice = await CompteurIoT.findById(devices.relationDevice);
+            }
+        }
 
-
-        return res.status(200).json({ msg: "device delete success", devices });
+        return res.status(200).json({ msg: "device delete success", devices, relationDevice });
     } catch (error) {
         throw new Error(`Error geting  device: ${error.message}`);
     }

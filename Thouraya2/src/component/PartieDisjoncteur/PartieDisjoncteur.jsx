@@ -1,6 +1,6 @@
 import React from "react";
 import "./PartieDisjoncteur.scss";
-const PartieDisjoncteur = () => {
+const PartieDisjoncteur = ({ data }) => {
   const etatsOne = [
     "Etat Disjoncteur",
     "Etat Sectionneur",
@@ -16,7 +16,11 @@ const PartieDisjoncteur = () => {
             <div className="part" key={index}>
               <p> {etat} </p>
               <div className="divSpan">
-                <span></span>
+                <span>{data && etat == "Etat Disjoncteur" && data.ETAT_DISJONCTEUR} </span>
+
+                <span>{data && etat == "Etat Sectionneur" && data.ETAT_SECTIONNEUR} </span>
+                <span>{data && etat == "Etat Fusible" && data.ETAT_FUSIBLE} </span>
+                <span>{data && etat == "Etat Bouton A-U" && data.ETAT_BP_AU} </span>
               </div>
             </div>
           ))}
@@ -27,7 +31,9 @@ const PartieDisjoncteur = () => {
             <div className="part" key={index}>
               <p> {etat} </p>
               <div className="divSpan">
-                <span></span>
+                <span>{data && etat == "Etat KM1" && data.ETAT_KM1}</span>
+                <span>{data && etat == "Etat KM2" && data.ETAT_KM2}</span>
+                <span>{data && etat == "Etat Relais TH" && data.ETAT_RELAIS}</span>
               </div>
             </div>
           ))}

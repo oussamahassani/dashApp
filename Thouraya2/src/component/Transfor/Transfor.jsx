@@ -4,6 +4,7 @@ import NavbarUser from "../NavbarUser/NavbarUser";
 import MainCompTransfor from "../MainCompTransfor/MainCompTransfor";
 
 const Transfor = () => {
+
   return (
     <div>
       <NavBarTransfor />

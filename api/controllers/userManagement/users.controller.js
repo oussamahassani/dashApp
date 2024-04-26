@@ -1,4 +1,4 @@
-import {User} from '../../models/user/index.js';
+import { User } from '../../models/user/index.js';
 import bcrypt from 'bcryptjs';
 
 export const addUser = async (req, res) => {
@@ -8,7 +8,7 @@ export const addUser = async (req, res) => {
         if (!username || !password || !role || !email || !etat) {
             throw new Error("All fields are required");
         }
-        
+
         // Check if user with the same email already exists
         const existingUser = await User.findOne({ email });
         if (existingUser) {
@@ -26,9 +26,9 @@ export const addUser = async (req, res) => {
             email,
             etat
         });
-        
+
         // Send response
-        res.status(200).json({msg:"new user was created ",data: newUser });
+        res.status(200).json({ msg: "new user was created ", data: newUser });
 
     } catch (error) {
         res.status(400).json({ error: error.message });
@@ -77,17 +77,17 @@ export const getUser = async (req, res) => {
             throw new Error("User not found");
         }
 
-        return res.status(200).json({user});
+        return res.status(200).json({ user });
     } catch (error) {
         throw new Error(`Error getting user: ${error.message}`);
     }
 }
 
-export const getAllUsers = async () => {
+export const getAllUsers = async (req, res) => {
     try {
         // Find all users
         const users = await User.find();
-        return users;
+        return res.status(200).json({ users });
     } catch (error) {
         throw new Error(`Error getting all users: ${error.message}`);
     }

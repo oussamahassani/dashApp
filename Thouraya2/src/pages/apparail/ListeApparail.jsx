@@ -2,6 +2,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import newRequest from "../../utils/newRequest";
+import Sidebar from "../../component/sidebar/Sidebar";
 
 const ListeApparail = () => {
     const [data, setData] = useState([]);
@@ -86,21 +87,26 @@ const ListeApparail = () => {
         },
     ];
     return (
-        <div className="datatable">
-            <div className="datatableTitle">
-                Add New appareil
-                <Link to="/apparails/new" className="link">
-                    Add New
-                </Link>
-            </div>
-            <DataGrid
-                className="datagrid"
-                rows={data}
-                columns={apareilColumns.concat(actionColumn)}
-                pageSize={9}
-                rowsPerPageOptions={[9]}
+        <div className="home">
+            <Sidebar />
+            <div className="homeContainer">
+                <div className="datatable">
+                    <div className="datatableTitle">
+                        Add New appareil
+                        <Link to="/apparails/new" className="link">
+                            Add New
+                        </Link>
+                    </div>
+                    <DataGrid
+                        className="datagrid"
+                        rows={data}
+                        columns={apareilColumns.concat(actionColumn)}
+                        pageSize={9}
+                        rowsPerPageOptions={[9]}
 
-            />
+                    />
+                </div>
+            </div>
         </div>
     );
 };

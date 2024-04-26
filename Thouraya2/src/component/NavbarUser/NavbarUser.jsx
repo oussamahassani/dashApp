@@ -3,28 +3,28 @@ import "./NavbarUser.scss";
 const NavbarUser = () => {
   return (
     <div className="NavbarUser">
-      <img src=".\images\logoApp.png" alt="" />
+      <img src="\images\logoApp.png" alt="" />
       <div className="partConf">
         <div className="conf desginForAllCards">
-          <img src=".\images\pinon.png" alt="" />
+          <img src="\images\pinon.png" alt="" />
           <p>Configuration</p>
         </div>
         <div className="IHM desginForAllCards">
-          <img src=".\images\comp.png" alt="" />
+          <img src="\images\comp.png" alt="" />
           <p>
             IHM - Vue <br /> Electrique
           </p>
         </div>
         <div className="alarm desginForAllCards">
-          <img src=".\images\alaram.png" alt="" />
+          <img src="\images\alaram.png" alt="" />
           <p>Alarmes</p>
         </div>
         <div className="archive desginForAllCards">
-          <img src=".\images\archive.png" alt="" />
+          <img src="\images\archive.png" alt="" />
           <p>Archives</p>
         </div>
         <div className="power desginForAllCards last">
-          <img src=".\images\off.png" alt="" />
+          <img src="\images\off.png" alt="" />
         </div>
       </div>
       <div className="posteHTB">
@@ -35,19 +35,19 @@ const NavbarUser = () => {
         <p> 21:11:20 </p>
       </div>
       <div className="language">
-        <img src=".\images\fr.png" alt="" />
+        <img src="\images\fr.png" alt="" />
         <div className="partLang">
           <span className="colorSpan">Français</span>
           <span>Anglais</span>
         </div>
-        <img src=".\images\EN.png" alt="" />
+        <img src="\images\EN.png" alt="" />
       </div>
       <div className="userandnotif">
         <div className="searchNotif">
-          <img src=".\images\search.png" alt="" />
-          <img src=".\images\notification.png" alt="" />
+          <img src="\images\search.png" alt="" />
+          <img src="\images\notification.png" alt="" />
         </div>
-        <img src=".\images\user.png" alt="" />
+        <img src="\images\user.png" alt="" />
       </div>
     </div>
   );
