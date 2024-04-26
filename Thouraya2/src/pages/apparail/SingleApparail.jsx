@@ -30,15 +30,15 @@ export default function SingleApparail() {
     <div className="home">
       <Sidebar />
       <div className="homeContainer">
-        <div>SingleApparail</div>
+        <div></div>
         <div>
           {devices && <>
-            <span>name device : {devices.name}</span>
-            <span>type device : {devices.device_type}</span>
-            <span> localtion : {devices.location}</span>
+            <p ><span className='text-danger'>name device : </span> {devices.name}</p>
+            <p><span className='text-danger'>type device : </span> {devices.device_type}</p>
+            <p><span className='text-danger'> localtion :</span>  {devices.location}</p>
 
             <div>
-              {devices.typeDevice == "armoire" ? <DetailMonArmoire data={relationDevice} /> : formData.typeDevice == "groupe" ? <GeneratorAppareil data={relationDevice} /> :
+              {devices.typeDevice == "armoire" ? <DetailMonArmoire data={relationDevice} /> : devices.typeDevice == "groupe" ? <GeneratorAppareil data={relationDevice} /> :
                 devices.typeDevice == "transformateur" ? <Detailstranform data={relationDevice} /> : ""
 
               }

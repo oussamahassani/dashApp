@@ -37,7 +37,7 @@ const Sidebar = () => {
       <div className="center">
         <ul>
           <p className="title">Main</p>
-          {role == 'supervisor' && <li><Link to="/" className='link'><DashboardIcon className='icon' /><span>Dashboard</span></Link></li>}
+          <li><Link to="/" className='link'><DashboardIcon className='icon' /><span>Dashboard</span></Link></li>
           {role == 'supervisor' && <li><Link to="/historiquedonnees" className='link'><HistoryIcon className='icon' /><span>Historique donnees</span></Link></li>}
           {(role == 'supervisor' || role == 'admin') && <li><Link to="/stast" className='link'><TimelineIcon className='icon' /><span>Traking Data</span></Link></li>}
 

@@ -3,13 +3,13 @@ import NavBarTransfor from "../NavBarTransfor/NavBarTransfor";
 import NavbarUser from "../NavbarUser/NavbarUser";
 import MainCompTransfor from "../MainCompTransfor/MainCompTransfor";
 
-const Transfor = () => {
+const Transfor = ({data}) => {
 
   return (
     <div>
       <NavBarTransfor />
       <NavbarUser />
-      <MainCompTransfor />
+      <MainCompTransfor data={data}/>
     </div>
   );
 };

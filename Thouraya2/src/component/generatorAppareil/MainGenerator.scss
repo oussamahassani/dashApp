@@ -13,14 +13,17 @@
     height: 800px;
 }
 
-.blockOne {
-    background-image: url("/images/group");
+.blockOnegenerator {
+    background-image: url("/images/group.png");
     position: relative;
-    width: 30%;
-    height: 76%;
+    width: 456px;
+    height: 152px;
     background-size: cover;
     border: 3px solid lightgoldenrodyellow;
     border-radius: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
 }
 
 .standIcon {

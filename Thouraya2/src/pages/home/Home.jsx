@@ -15,7 +15,7 @@ const Home = ({role}) => {
   console.log("myrole",role)
   return (
     <>
-    { role =="supervisor" ? 
+   
       <div className='home'>
       <Sidebar />
       <div className="homeContainer">
@@ -38,7 +38,7 @@ const Home = ({role}) => {
         <LineChart/>
         </div>
       </div>
-    </div> : role =="admin" ?<Navigate to="/stast" replace /> : <Navigate to="/apparails" replace />}
+    </div> 
     </>
   )
 }

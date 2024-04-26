@@ -1,12 +1,12 @@
 import React from 'react'
 import Transfor from "../../../component/Transfor/Transfor";
 
-export default function Detailstranform() {
+export default function Detailstranform({data}) {
     return (
-        <div>Detailstranform
+        <div>
 
 
-            <Transfor />
+            <Transfor data={data}/>
 
         </div>
     )
