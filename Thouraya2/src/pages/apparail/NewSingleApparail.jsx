@@ -11,7 +11,6 @@ export default function NewSingleApparail({ role }) {
   const [formData, setFormData] = useState({
     idslave: '',
     device_name: '',
-    device_type: '',
     manufacturer: '',
     location: '',
     description: '',
@@ -25,10 +24,37 @@ export default function NewSingleApparail({ role }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     newRequest.post('/app/add', { ...formData, device: { ...typeData } })
-      .then(res => console.log(res.data))
+      .then(res => {console.log(res.data)
+    
+    alert("votre appareil a eté ajouter avec success")})
       .catch(err => console.log(err))
   };
-
+  const gouvernerats = [
+    'Ariana',
+    'Béja',
+    'Ben Arous',
+    'Bizerte',
+    'Gabès',
+    'Gafsa',
+    'Jendouba',
+    'Kairouan',
+    'Kasserine',
+    'Kébili',
+    'Le Kef',
+    'Mahdia',
+    'La Manouba',
+    'Médenine',
+    'Monastir',
+    'Nabeul',
+    'Sfax',
+    'Sidi Bouzid',
+    'Siliana',
+    'Sousse',
+    'Tataouine',
+    'Tozeur',
+    'Tunis',
+    'Zaghouan'
+  ];
   return (
     <div className="home">
       <Sidebar />
@@ -43,16 +69,19 @@ export default function NewSingleApparail({ role }) {
             <input type="text" className="form-control" name="device_name" value={formData.device_name} onChange={handleChange} required />
           </div>
           <div className="form-group">
-            <label>Device Type:</label>
-            <input type="text" className="form-control" name="device_type" value={formData.device_type} onChange={handleChange} />
-          </div>
-          <div className="form-group">
             <label>Manufacturer:</label>
             <input type="text" className="form-control" name="manufacturer" value={formData.manufacturer} onChange={handleChange} />
           </div>
           <div className="form-group">
             <label>Location:</label>
-            <input type="text" className="form-control" name="location" value={formData.location} onChange={handleChange} />
+            <select  className="form-control" name="location" value={formData.location} onChange={handleChange} >
+            <option value=''>Sélectionnez un gouvernorat</option>
+        {gouvernerats.map((gouvernerat) => (
+          <option key={gouvernerat} value={gouvernerat}>
+            {gouvernerat}
+          </option>
+        ))}
+        </select>
           </div>
           <div className="form-group">
             <label>Description:</label>

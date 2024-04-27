@@ -3,45 +3,49 @@ import "./MainCompTransfor.scss";
 const MainCompTransfor = ({data}) => {
   return (
     <div className="MainCompTransfor">
-      <div className="contenuMain">
-        <div className="blockOne">
+      <div className="contenuMaintr">
+        <div className="row">
+        <div className=" ml-2 blockOne col-md-5">
           <h1>Recouvrir</h1>
           <div className="oil standIcon">
             <img src="/images/oil.png" alt="" />
-            <p>{data.tensionEntree}°C</p>
+            <p>{data && data.tensionEntrée}°C</p>
           </div>
           <div className="temp standIcon">
             <img src="/images/temp.png" alt="" />
-            <p>{data.tensionSortie} °C</p>
+            <p>{data && data.tensionSortie} °C</p>
           </div>
           <div className="wirless standIcon">
             <img src="/images/wireless.png" alt="" />
-            {data.courantSortie}
+            {data && data.courantSortie}
           </div>
         </div>
-        <div>
-        <div className="blockTwo">
+        <div className="col-md-5">
+        <div className="d-flex justify-content-around align-items-center"> 
+        <div >
           <h1>local transfo</h1>
           <img src="/images/immeuble.png" alt="" />
-          {data.poids}
+          {data && data.poids}
 
         </div>
-        <div className="blockTwo">
-          <h1>Centra de mesure</h1>
+        <div >
           <img src="/images/fusible.png" alt="" />
-          {data.puissance}
-
+          {data && data.dateFabrication}
         </div>
         </div>
-        <div>
+        </div>
+        </div>
+        <div className="d-flex justify-content-around align-items-center">
+      
         <div className="blockTwo">
-          <h1>local transfo</h1>
-          <img src="/images/compteurGris.png" alt="" />
+        <img src="/images/compteurGris.png" alt="" />
+
+          {data && data.puissance}
+
         </div>
         <div className="blockThree">
-          <h1>Centra de mesure</h1>
           <img src="/images/compteurGris.png" alt="" />
-
+          {data && data.marque}
         </div>
         </div>
       </div>

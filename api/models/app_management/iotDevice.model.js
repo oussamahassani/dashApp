@@ -4,7 +4,6 @@ const { Schema } = mongoose;
 const IoTDeviceSchema = new Schema({
     idslave: { type: String, required: true },
     device_name: { type: String, required: true },
-    device_type: { type: String },
     manufacturer: { type: String },
     location: { type: String },
     description: { type: String },

@@ -28,8 +28,11 @@ function App() {
     let token = localStorage.getItem("accessToken");
     if (token) {
       let data = decodeJwt(token);
-      console.log("accessToken", data)
-      setRole(data.role)
+      if(data){
+        console.log("accessToken", data)
+        setRole(data.role)
+      }
+    
     }
 
   }, [localStorage.getItem("accessToken"), role, setRole]);

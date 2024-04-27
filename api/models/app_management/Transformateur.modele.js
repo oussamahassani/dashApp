@@ -15,7 +15,7 @@ const transformateurSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    tensionEntree: {
+    tensionEntrée: {
         type: Number,
         required: true
     },

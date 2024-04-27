@@ -33,8 +33,7 @@ export default function SingleApparail() {
         <div></div>
         <div>
           {devices && <>
-            <p ><span className='text-danger'>name device : </span> {devices.name}</p>
-            <p><span className='text-danger'>type device : </span> {devices.device_type}</p>
+            <p><span className='text-danger'>type device : </span> {devices.typeDevice}</p>
             <p><span className='text-danger'> localtion :</span>  {devices.location}</p>
 
             <div>

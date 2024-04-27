@@ -41,7 +41,7 @@ const ListeApparail = () => {
             },
         },
         {
-            field: "device_type",
+            field: "typeDevice",
             headerName: "Type",
             width: 230,
         },
