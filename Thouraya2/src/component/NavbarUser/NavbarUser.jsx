@@ -3,14 +3,14 @@ import "./NavbarUser.scss";
 const NavbarUser = () => {
   return (
     <div className="NavbarUser">
-      <img src="\images\logoApp.png" alt="" />
+      <img src="\images\logoApp.png" alt="" width={"50px"} />
       <div className="partConf">
         <div className="conf desginForAllCards">
           <img src="\images\pinon.png" alt="" />
           <p>Configuration</p>
         </div>
         <div className="IHM desginForAllCards">
-          <img src="\images\comp.png" alt="" />
+          <img src="\images\comp.png" alt="" width={"50px"} />
           <p>
             IHM - Vue <br /> Electrique
           </p>
@@ -37,8 +37,8 @@ const NavbarUser = () => {
       <div className="language">
         <img src="\images\fr.png" alt="" />
         <div className="partLang">
-          <span className="colorSpan">Français</span>
-          <span>Anglais</span>
+          <span className="colorSpan">fr</span>
+          <span>en</span>
         </div>
         <img src="\images\EN.png" alt="" />
       </div>

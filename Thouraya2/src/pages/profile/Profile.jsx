@@ -13,8 +13,7 @@ const Profile = () => {
   return (
     <div className='profile'>
       <Sidebar />
-      <div className="profileContainer">
-        <Navbar />
+      <div className="profileContainer ml-2 pt-2 mt-4">
         <div>
           <Grid container spacing={3}>
             <Grid item xs={12} md={3}>
