@@ -11,7 +11,7 @@ export default function DetailArmoire({ data }) {
             <div className="AllMyApp">
                 <CribleJF100 title={"CRIBLE JF 100"} data={data} />
                 <ETATSGENERAL title={"ETATS GENERAL"} data={data} />
-                <CribleJF100 title={"BROYEUR WB 100"} data={data} />
+                {/*<CribleJF100 title={"BROYEUR WB 100"} data={data} />*/}
             </div>
 
         </>
