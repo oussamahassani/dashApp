@@ -7,6 +7,11 @@ const ETATSGENERAL = ({ title }) => {
       <h1> {title} </h1>
       <div>
         <CompDate />
+
+        <div className="datePart">
+          <img src="/images/armoir2.png" height={"650px"} />
+
+        </div>
       </div>
     </div>
   );
